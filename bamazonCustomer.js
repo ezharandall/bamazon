@@ -1,3 +1,4 @@
+
 //node modules
 var mysql = require('mysql');
 var Table = require('cli-table');
@@ -29,7 +30,7 @@ connection.connect(function(err) {
 function printItems(cb){
   //new cli-table
   var table = new Table({
-    head: ['ID Number', 'Product', 'Department', 'price', 'Quantity Available']
+    head: ['ID Number', 'Product', 'Department', 'Price', 'Quantity Available']
   });
   //get all rows from the Products table
   connection.query('SELECT * FROM Products', function(err, res){
