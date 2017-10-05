@@ -33,7 +33,7 @@ function printItems(cb){
     head: ['ID Number', 'Product', 'Department', 'Price', 'Quantity Available']
   });
   //get all rows from the Products table
-  connection.query('SELECT * FROM Products', function(err, res){
+  connection.query('SELECT * FROM Product', function(err, res){
     if (err) throw err;
     //add all of the rows to the cli-table
     for (var i = 0; i < res.length; i++) {
